@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -100,16 +100,16 @@ public class Quizmanager : MonoBehaviour
 
             options[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = QnA[CurrentQuestion].Answers[i];
 
-            if (QnA[CurrentQuestion].CorrectAnswer == i+1)
+            if (QnA[CurrentQuestion].CorrectAnswer == i + 1)
             {
-                 options[i].GetComponent<AnswerScript>().isCorrect = true;
+                options[i].GetComponent<AnswerScript>().isCorrect = true;
             }
         }
     }
 
     void GenerateQuestions()
     {
-        if(QnA.Count > 0)
+        if (QnA.Count > 0)
         {
             CurrentQuestion = Random.Range(0, QnA.Count);
 
@@ -124,16 +124,16 @@ public class Quizmanager : MonoBehaviour
 
             GameOver();
         }
-       
+
     }
 
     //public void Nascondi_Right_Panel()
     //{
-        //Right_Panel.SetActive(false);
+    //Right_Panel.SetActive(false);
     //}
 
     //public void Nascondi_Wrong_Panel()
     //{
-        //Wrong_Panel.SetActive(false);
+    //Wrong_Panel.SetActive(false);
     //}
 }
